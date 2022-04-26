@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pomodoro timer</title>
+  </head>
+  <body class="bg-blue-200 font-poppins">
+    <div
+      id="container"
+      class="container mx-auto my-2 p-5 grid md:grid-cols-3 grid-cols-1 md:gap-6 gap-3"
+    >
+      <!-- Cycles -->
+      <div
+        class="container mx-auto my-4 p-5 bg-blue-300 xl:w-64 xl:h-64 w-56 h-56 rounded-full border-2 border-blue-400 grid grid-cols-1 gap-2"
+      >
+        <div class="mx-auto my-auto text-3xl" id="cycles">Cycles:</div>
+        <div id="counter" class="mx-auto text-2xl">0</div>
+      </div>
+
+      <!-- Work Timer -->
+      <div
+        class="container mx-auto my-4 p-5 bg-blue-300 xl:w-96 xl:h-96 w-56 h-56 rounded-full border-2 border-blue-400 grid grid-cols-1 gap-2"
+      >
+        <div class="mx-auto my-auto text-5xl" id="work">Work:</div>
+        <div id="work-timer" class="timer mx-auto">
+          <p class="text-4xl">
+            <span id="w-minutes">25</span><span class="semicolon">:</span
+            ><span id="w-seconds">00</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Break Timer -->
+      <div
+        class="container mx-auto my-4 p-5 bg-blue-300 xl:w-64 xl:h-64 w-56 h-56 rounded-full border-2 border-blue-400 grid grid-cols-1 gap-2"
+      >
+        <div class="mx-auto my-auto text-3xl" id="break">Break:</div>
+        <div id="break-timer" class="timer mx-auto">
+          <p class="text-2xl">
+            <span id="b-minutes">5</span><span class="semicolon">:</span
+            ><span id="b-seconds">00</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+    </div>
+    <div class="container mx-auto grid grid-cols-1 gap-2 my-1">
+      <div class="mx-auto">
+        <button
+          id="reset"
+          class="bg-blue-200 rounded-full border-2 border-blue-400 bg-blue-100 md:w-20 md:h-20 w-16 h-16"
+        >
+          <i class="fa-solid fa-arrow-rotate-left"></i>
+        </button>
+        <button
+          id="start"
+          class="bg-blue-200 rounded-full border-2 border-blue-400 bg-blue-100 md:w-20 md:h-20 w-16 h-16"
+        >
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button
+          id="stop"
+          class="bg-blue-200 rounded-full border-2 border-blue-400 bg-blue-100 md:w-20 md:h-20 w-16 h-16"
+        >
+          <i class="fa-solid fa-pause"></i>
+        </button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
